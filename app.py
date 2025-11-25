@@ -70,7 +70,7 @@ def propose_domain_name(description, prompt, model, tokenizer):
     return output.lower()
 
 
-MODEL_NAME = "ft_model/checkpoint-81/"
+MODEL_NAME = "model_weights/"
 model = AutoModelForCausalLM.from_pretrained(MODEL_NAME, dtype=torch.bfloat16)
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 model.eval()
